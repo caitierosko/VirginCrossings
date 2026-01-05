@@ -1,0 +1,102 @@
+import type React from "react"
+import type { Metadata, Viewport } from "next"
+import { Inter } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import "./globals.css"
+
+// <CHANGE> Using Inter font for modern sans-serif
+const inter = Inter({ subsets: ["latin"] })
+
+// <CHANGE> Updated metadata for Virgin CROSSings landing page with SEO
+export const metadata: Metadata = {
+  title: "Virgin CROSSings — Wing-Foil Flotilla in the BVI (Feb 7–14, 2026)",
+  description:
+    "A 7-day wing-foil expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans. 50% of proceeds to Slow is Pro.",
+  generator: "v0.app",
+  icons: {
+    icon: [
+      {
+        url: "/icon-light-32x32.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/icon-dark-32x32.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    apple: "/apple-icon.png",
+  },
+  openGraph: {
+    title: "Virgin CROSSings — Wing-Foil Flotilla in the BVI",
+    description:
+      "A 7-day wing-foil expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans.",
+    type: "website",
+    locale: "en_US",
+  },
+}
+
+// <CHANGE> Added viewport configuration for mobile-first design
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0891B2",
+  userScalable: true,
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Event",
+              name: "Virgin CROSSings",
+              description: "A 7-day wing-foil flotilla across the British Virgin Islands",
+              startDate: "2026-02-07",
+              endDate: "2026-02-14",
+              location: {
+                "@type": "Place",
+                name: "Tortola, British Virgin Islands",
+                address: {
+                  "@type": "PostalAddress",
+                  addressCountry: "VG",
+                },
+              },
+              offers: [
+                {
+                  "@type": "Offer",
+                  price: "2500",
+                  priceCurrency: "USD",
+                  name: "Shared Bunk Cabin",
+                  availability: "https://schema.org/LimitedAvailability",
+                },
+                {
+                  "@type": "Offer",
+                  price: "4500",
+                  priceCurrency: "USD",
+                  name: "Private Queen Cabin",
+                  availability: "https://schema.org/LimitedAvailability",
+                },
+              ],
+            }),
+          }}
+        />
+      </head>
+      <body className={`${inter.className} font-sans antialiased`}>
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  )
+}

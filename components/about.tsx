@@ -1,0 +1,37 @@
+import { Anchor, Users, Heart, Shield } from "lucide-react"
+
+export function About() {
+  const badges = [
+    { icon: Shield, label: "Chase Support" },
+    { icon: Anchor, label: "Crewed Catamarans" },
+    { icon: Users, label: "Small Group" },
+    { icon: Heart, label: "Gives Back (50%)" },
+  ]
+
+  return (
+    <section className="py-20 px-4 bg-white">
+      <div className="container mx-auto max-w-5xl">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#0A2540] mb-6 text-balance">About the Experience</h2>
+          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto text-pretty">
+            Hosted by Virgin Wakes x UC Yacht Charters, Virgin CROSSings is a wing-foil expedition across the
+            BVI—downwind lines, reef passes, and open-water glides with your crewed catamarans running chase support.{" "}
+            <strong className="text-[#0891B2]">50% of proceeds benefit the Slow is Pro non-profit</strong> to promote
+            safer boating.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
+          {badges.map((badge, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-[#F0F9FF] border border-[#0891B2]/20 hover:border-[#0891B2] transition-colors"
+            >
+              <badge.icon className="w-8 h-8 text-[#0891B2]" />
+              <span className="text-sm md:text-base font-medium text-[#0A2540] text-center">{badge.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
