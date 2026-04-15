@@ -110,7 +110,7 @@ async function sendAdminNotification(data: any) {
   try {
     await resend.emails.send({
       from: "Virgin CROSSings <reservations@yourdomain.com>", // Replace with your verified domain
-      to: "admin@yourdomain.com", // Replace with your admin email
+      to: "grantfleming@bellsouth.net", // Replace with your admin email
       subject: `New Reservation: ${data.name}`,
       html: `
         <div style="font-family: Arial, sans-serif;">
