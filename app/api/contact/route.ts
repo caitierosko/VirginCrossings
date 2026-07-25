@@ -19,7 +19,7 @@ export async function POST(req: Request) {
       from: "Website Form <onboarding@resend.dev>",
       to: ["grantfleming@bellsouth.net"],
       subject: `New Website Inquiry from ${name}`,
-      reply_to: email,
+      replyTo: email,
       html: `
         <h2>New Contact Form Submission</h2>
         <p><strong>Name:</strong> ${name}</p>

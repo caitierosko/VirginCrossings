@@ -1,7 +1,6 @@
 "use server"
 
 import { Resend } from "resend"
-import { google } from "googleapis"
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -60,7 +59,7 @@ export async function submitReservation(formData: FormData) {
 async function sendConfirmationEmail(data: any) {
   try {
     await resend.emails.send({
-      from: "Virgin CROSSings <reservations@yourdomain.com>", // Replace with your verified domain
+      from: "Virgin CROSSings <onboarding@resend.dev>", // Swap for your verified domain once set up in Resend
       to: data.email as string,
       subject: "Your Virgin CROSSings Reservation Request",
       html: `
@@ -109,8 +108,9 @@ async function sendConfirmationEmail(data: any) {
 async function sendAdminNotification(data: any) {
   try {
     await resend.emails.send({
-      from: "Virgin CROSSings <reservations@yourdomain.com>", // Replace with your verified domain
-      to: "grantfleming@bellsouth.net", // Replace with your admin email
+      from: "Virgin CROSSings <onboarding@resend.dev>", // Swap for your verified domain once set up in Resend
+      to: "grantfleming@bellsouth.net", // Admin notification recipient
+      replyTo: data.email as string,
       subject: `New Reservation: ${data.name}`,
       html: `
         <div style="font-family: Arial, sans-serif;">
@@ -140,6 +140,14 @@ async function sendAdminNotification(data: any) {
 
 async function addToGoogleSheet(data: any) {
   try {
+    // Skip entirely if Google Sheets isn't configured (keeps the app working without it)
+    if (!process.env.GOOGLE_SHEETS_CREDENTIALS || !process.env.GOOGLE_SHEET_ID) {
+      return
+    }
+
+    // Lazy-load googleapis so this large Node-only package is never bundled into the page
+    const { google } = await import("googleapis")
+
     // Parse the service account credentials from environment variable
     const credentials = JSON.parse(process.env.GOOGLE_SHEETS_CREDENTIALS || "{}")
 
