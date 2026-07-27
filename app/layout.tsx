@@ -9,9 +9,9 @@ const inter = Inter({ subsets: ["latin"] })
 
 // <CHANGE> Updated metadata for Virgin CROSSings landing page with SEO
 export const metadata: Metadata = {
-  title: "Virgin CROSSings — Wing-Foil Flotilla in the BVI (Feb 7–14, 2026)",
+  title: "Virgin CROSSings — Wing-Foil & Kitesurf Flotilla in the BVI (Feb 6–13, 2027)",
   description:
-    "A 7-day wing-foil expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans. 50% of proceeds to Slow is Pro.",
+    "Round Two for 2027! A 7-day wing-foil and kitesurf expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans. 50% of proceeds to Slow is Pro.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   openGraph: {
-    title: "Virgin CROSSings — Wing-Foil Flotilla in the BVI",
+    title: "Virgin CROSSings — Wing-Foil & Kitesurf Flotilla in the BVI (Round Two 2027)",
     description:
-      "A 7-day wing-foil expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans.",
+      "Round Two for 2027! A 7-day wing-foil and kitesurf expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans.",
     type: "website",
     locale: "en_US",
   },
@@ -61,10 +61,10 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Event",
-              name: "Virgin CROSSings",
-              description: "A 7-day wing-foil flotilla across the British Virgin Islands",
-              startDate: "2026-02-07",
-              endDate: "2026-02-14",
+              name: "Virgin CROSSings — Round Two 2027",
+              description: "A 7-day wing-foil and kitesurf flotilla across the British Virgin Islands",
+              startDate: "2027-02-06",
+              endDate: "2027-02-13",
               location: {
                 "@type": "Place",
                 name: "Tortola, British Virgin Islands",

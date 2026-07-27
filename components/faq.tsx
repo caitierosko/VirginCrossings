@@ -3,12 +3,17 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export function FAQ() {
   const faqs = [
     {
-      question: "Do I need to bring pumps?",
-      answer: "No—onboard.",
+      question: "Can I kitesurf instead of wing-foil?",
+      answer:
+        "Absolutely. Round Two is a combined wing-foil and kitesurf flotilla. Riders on either discipline are welcome, and the chase boats support both.",
     },
     {
-      question: "What are typical wing sizes?",
-      answer: "3.5–5.5 depending on rider and conditions.",
+      question: "Do I need to bring pumps?",
+      answer: "No—wing and kite pumps are onboard.",
+    },
+    {
+      question: "What are typical wing and kite sizes?",
+      answer: "Wings run 3.5–5.5 and kites typically 9–12m, depending on rider and the day's trade winds.",
     },
     {
       question: "What about connectivity?",
@@ -16,7 +21,7 @@ export function FAQ() {
     },
     {
       question: "What's the arrival timing?",
-      answer: "Plan to be on Tortola by 2:00 PM on Feb 7.",
+      answer: "Plan to be on Tortola by 2:00 PM on Feb 6, 2027.",
     },
     {
       question: "Which charity benefits from this?",

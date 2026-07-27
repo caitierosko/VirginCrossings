@@ -9,23 +9,28 @@ export function Hero() {
   }
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-[#0891B2]/10 via-white to-[#0A2540]/5 pt-24 pb-16 px-4">
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0c16.569 0 30 13.431 30 30 0 16.569-13.431 30-30 30C13.431 60 0 46.569 0 30 0 13.431 13.431 0 30 0zm0 58C44.912 58 57 45.912 57 31S44.912 4 30 4 3 16.088 3 31s12.088 27 27 27z' fill='%230891B2' fillOpacity='1' fillRule='evenodd'/%3E%3C/svg%3E")`,
-        }}
-      />
+    <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 px-4 overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src="/images/kitesurf-action.png"
+          alt="Kitesurfer carving across turquoise Caribbean water in the Virgin Islands"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/80 via-[#0A2540]/60 to-[#0891B2]/50" />
+      </div>
       <div className="container mx-auto max-w-5xl text-center relative z-10">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-[#0A2540] mb-6 text-balance leading-tight">
-          Wing-Foil Island Crossings in the BVI
+        <div className="inline-block bg-[#F59E0B] text-[#0A2540] px-5 py-2 rounded-full text-sm md:text-base font-bold mb-6 uppercase tracking-wide">
+          Round Two • 2027
+        </div>
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance leading-tight">
+          Wing-Foil & Kitesurf Island Crossings in the BVI
         </h1>
-        <p className="text-xl md:text-2xl text-[#0E7490] mb-4 font-medium">
-          Feb 7–14, 2026 • Tortola, British Virgin Islands
+        <p className="text-xl md:text-2xl text-white/90 mb-4 font-medium">
+          Feb 6–13, 2027 • Tortola, British Virgin Islands
         </p>
-        <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto text-pretty leading-relaxed">
-          A 7-day wing-foil flotilla—real island crossings with chase-boat support, crewed catamarans, and good-energy
-          community.
+        <p className="text-lg md:text-xl text-white/80 mb-10 max-w-3xl mx-auto text-pretty leading-relaxed">
+          After a sold-out first edition, we&apos;re back for Round Two—a 7-day wing-foil and kitesurf flotilla with
+          real island crossings, chase-boat support, crewed catamarans, and good-energy community.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
@@ -38,7 +43,7 @@ export function Hero() {
           <Button
             variant="outline"
             size="lg"
-            className="border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white rounded-full px-8 py-6 text-lg min-h-[3.5rem] w-full sm:w-auto bg-transparent"
+            className="border-white text-white hover:bg-white hover:text-[#0A2540] rounded-full px-8 py-6 text-lg min-h-[3.5rem] w-full sm:w-auto bg-transparent"
             asChild
           >
             <a href="#welcome-packet" className="flex items-center gap-2">

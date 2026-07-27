@@ -11,7 +11,13 @@ export function DatesInclusions() {
     "Fuel, moorings, cruising fees & permits",
   ]
 
-  const notIncluded = ["Flights", "Airport/ferry transfers", "Some meals ashore", "Trip insurance", "Wing gear"]
+  const notIncluded = [
+    "Flights",
+    "Airport/ferry transfers",
+    "Some meals ashore",
+    "Trip insurance",
+    "Wing & kite gear",
+  ]
 
   return (
     <section className="py-20 px-4 bg-gradient-to-b from-white to-[#F0F9FF]">
@@ -19,7 +25,7 @@ export function DatesInclusions() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-[#0A2540] mb-4 text-balance">Dates & What's Included</h2>
           <p className="text-xl md:text-2xl text-[#0891B2] font-semibold">
-            February 7–14, 2026 • Start/End: Tortola (EIS)
+            February 6–13, 2027 • Start/End: Tortola (EIS)
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">

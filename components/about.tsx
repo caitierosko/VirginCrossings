@@ -14,11 +14,25 @@ export function About() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-[#0A2540] mb-6 text-balance">About the Experience</h2>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto text-pretty">
-            Hosted by Virgin Wakes x UC Yacht Charters, Virgin CROSSings is a wing-foil expedition across the
-            BVI—downwind lines, reef passes, and open-water glides with your crewed catamarans running chase support.{" "}
+            Hosted by Virgin Wakes x UC Yacht Charters, Virgin CROSSings is a wing-foil and kitesurf expedition across
+            the BVI—downwind lines, reef passes, and open-water glides with your crewed catamarans running chase
+            support. Whether you&apos;re on a wing or a kite, you&apos;ll ride some of the most beautiful, consistent
+            trade-wind conditions in the Caribbean.{" "}
             <strong className="text-[#0891B2]">50% of proceeds benefit the Slow is Pro non-profit</strong> to promote
             safer boating.
           </p>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-6 mb-12">
+          <img
+            src="/images/wingfoil-catamaran.png"
+            alt="Wing foiler gliding beside a crewed catamaran in the British Virgin Islands"
+            className="w-full h-64 object-cover rounded-2xl shadow-md"
+          />
+          <img
+            src="/images/kite-jump.png"
+            alt="Kitesurfer boosting a jump over turquoise Caribbean water"
+            className="w-full h-64 object-cover rounded-2xl shadow-md"
+          />
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
           {badges.map((badge, index) => (
