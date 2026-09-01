@@ -12,8 +12,8 @@ export function Hero() {
     <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 px-4 overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/images/kitesurf-action.png"
-          alt="Kitesurfer carving across turquoise Caribbean water in the Virgin Islands"
+          src="/images/kitesurf-action.jpg"
+          alt="Kitesurfer boosting a big air jump over turquoise Caribbean water near a mangrove island in the Virgin Islands"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/80 via-[#0A2540]/60 to-[#0891B2]/50" />
