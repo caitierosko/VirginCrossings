@@ -1,11 +1,22 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Open_Sans, Lato, Raleway, Nunito, Quicksand, Manrope, DM_Sans, Space_Grotesk, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 // <CHANGE> Using Inter font for modern sans-serif
 const inter = Inter({ subsets: ["latin"] })
+
+// Additional font imports
+const openSans = Open_Sans({ subsets: ["latin"] })
+const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] })
+const raleway = Raleway({ subsets: ["latin"] })
+const nunito = Nunito({ subsets: ["latin"] })
+const quicksand = Quicksand({ subsets: ["latin"] })
+const manrope = Manrope({ subsets: ["latin"] })
+const dmSans = DM_Sans({ subsets: ["latin"] })
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] })
 
 // <CHANGE> Updated metadata for Virgin CROSSings landing page with SEO
 export const metadata: Metadata = {

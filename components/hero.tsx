@@ -28,8 +28,8 @@ export function Hero() {
         <div className="inline-block bg-[#11888e] text-white px-5 py-2 rounded-full text-sm md:text-base font-bold mb-6 uppercase tracking-wide">
           Year Two • 2027
         </div>
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance leading-tight">
-          Wing-Foil & Kitesurf Island Crossings in the BVI
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance leading-tight" style={{ fontFamily: '"JetBrains Mono", monospace' }}>
+          Wind Dont Wait
         </h1>
         <p className="text-xl md:text-2xl text-white/90 mb-4 font-medium">
           Feb 8–15, 2027 • British Virgin Islands
