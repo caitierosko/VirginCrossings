@@ -11,11 +11,17 @@ export function Hero() {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-24 pb-16 px-4 overflow-hidden">
       <div className="absolute inset-0">
-        <img
-          src="/images/kitesurf-action.jpg"
-          alt="Kitesurfer boosting a big air jump over turquoise Caribbean water near a mangrove island in the Virgin Islands"
+        <video
           className="w-full h-full object-cover"
-        />
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster="/images/kitesurf-action.jpg"
+          aria-label="Kitesurfing and wing-foiling across turquoise Caribbean water in the Virgin Islands"
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/80 via-[#0A2540]/60 to-[#0891B2]/50" />
       </div>
       <div className="container mx-auto max-w-5xl text-center relative z-10">
