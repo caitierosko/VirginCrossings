@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 // <CHANGE> Updated metadata for Virgin CROSSings landing page with SEO
 export const metadata: Metadata = {
-  title: "Virgin CROSSings — Wing-Foil & Kitesurf Flotilla in the BVI (Feb 6–13, 2027)",
+  title: "Virgin CROSSings — Wing-Foil & Kitesurf Flotilla in the BVI (Feb 8–15, 2027)",
   description:
     "Round Two for 2027! A 7-day wing-foil and kitesurf expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans. 50% of proceeds to Slow is Pro.",
   generator: "v0.app",
@@ -63,11 +63,11 @@ export default function RootLayout({
               "@type": "Event",
               name: "Virgin CROSSings — Round Two 2027",
               description: "A 7-day wing-foil and kitesurf flotilla across the British Virgin Islands",
-              startDate: "2027-02-06",
-              endDate: "2027-02-13",
+              startDate: "2027-02-08",
+              endDate: "2027-02-15",
               location: {
                 "@type": "Place",
-                name: "Tortola, British Virgin Islands",
+                name: "British Virgin Islands",
                 address: {
                   "@type": "PostalAddress",
                   addressCountry: "VG",
@@ -76,16 +76,16 @@ export default function RootLayout({
               offers: [
                 {
                   "@type": "Offer",
-                  price: "2500",
+                  price: "7000",
                   priceCurrency: "USD",
-                  name: "Shared Bunk Cabin",
+                  name: "Cabin with Ensuite",
                   availability: "https://schema.org/LimitedAvailability",
                 },
                 {
                   "@type": "Offer",
-                  price: "4500",
+                  price: "3500",
                   priceCurrency: "USD",
-                  name: "Private Queen Cabin",
+                  name: "Per Person (Shared Cabin)",
                   availability: "https://schema.org/LimitedAvailability",
                 },
               ],

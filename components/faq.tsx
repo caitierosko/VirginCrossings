@@ -21,7 +21,8 @@ export function FAQ() {
     },
     {
       question: "What's the arrival timing?",
-      answer: "Plan to be on Tortola by 2:00 PM on Feb 6, 2027.",
+      answer:
+        "Arrive on Feb 8, 2027. The first night is a sleep-aboard—the boat stays at the dock overnight so everyone has time to get in, then we depart the morning of the 9th.",
     },
     {
       question: "Which charity benefits from this?",

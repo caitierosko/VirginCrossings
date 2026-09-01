@@ -26,7 +26,7 @@ export function Hero() {
           Wing-Foil & Kitesurf Island Crossings in the BVI
         </h1>
         <p className="text-xl md:text-2xl text-white/90 mb-4 font-medium">
-          Feb 6–13, 2027 • Tortola, British Virgin Islands
+          Feb 8–15, 2027 • British Virgin Islands
         </p>
         <p className="text-lg md:text-xl text-white/80 mb-10 max-w-3xl mx-auto text-pretty leading-relaxed">
           After a sold-out first edition, we&apos;re back for Round Two—a 7-day wing-foil and kitesurf flotilla with

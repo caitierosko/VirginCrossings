@@ -103,9 +103,8 @@ export function ReservationForm() {
                 <SelectValue placeholder="Select cabin type" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="shared-bunk">Shared Bunk ($2,500/person)</SelectItem>
-                <SelectItem value="private-queen-single">Private Queen - Single ($4,500)</SelectItem>
-                <SelectItem value="private-queen-couple">Private Queen - Couple ($4,500)</SelectItem>
+                <SelectItem value="full-cabin">Full Cabin ($7,000)</SelectItem>
+                <SelectItem value="per-person">Per Person, Share a Cabin ($3,500)</SelectItem>
               </SelectContent>
             </Select>
           </div>

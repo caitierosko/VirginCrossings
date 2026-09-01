@@ -14,10 +14,10 @@ export function About() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-[#0A2540] mb-6 text-balance">About the Experience</h2>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto text-pretty">
-            Hosted by Virgin Wakes x UC Yacht Charters, Virgin CROSSings is a wing-foil and kitesurf expedition across
-            the BVI—downwind lines, reef passes, and open-water glides with your crewed catamarans running chase
-            support. Whether you&apos;re on a wing or a kite, you&apos;ll ride some of the most beautiful, consistent
-            trade-wind conditions in the Caribbean.{" "}
+            Hosted by Virgin CROSSings, this is a wing-foil and kitesurf expedition across the BVI—downwind lines, reef
+            passes, and open-water glides with your crewed catamarans running chase support. Whether you&apos;re on a
+            wing or a kite, you&apos;ll ride some of the most beautiful, consistent trade-wind conditions in the
+            Caribbean.{" "}
             <strong className="text-[#0891B2]">50% of proceeds benefit the Slow is Pro non-profit</strong> to promote
             safer boating.
           </p>

@@ -24,8 +24,12 @@ export function DatesInclusions() {
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-[#0A2540] mb-4 text-balance">Dates & What's Included</h2>
-          <p className="text-xl md:text-2xl text-[#0891B2] font-semibold">
-            February 6–13, 2027 • Start/End: Tortola (EIS)
+          <p className="text-xl md:text-2xl text-[#0891B2] font-semibold mb-3">
+            February 8–15, 2027 • British Virgin Islands
+          </p>
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto text-pretty leading-relaxed">
+            Your first night is a sleep-aboard—the boat stays docked so everyone can arrive on the 8th, then we set sail
+            the morning of the 9th.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
