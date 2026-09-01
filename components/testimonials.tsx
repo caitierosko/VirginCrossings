@@ -6,19 +6,19 @@ export function Testimonials() {
       quote:
         "The best week of riding in my life. Crossing between islands with the chase boat right there gave me the confidence to push way further than I ever have.",
       name: "Marcus T.",
-      detail: "Wing foiler • Round One",
+      detail: "Wing foiler • Year One",
     },
     {
       quote:
         "Flawless organization, incredible crew, and downwinders that felt straight out of a dream. I already told my whole crew we're booking Round Two.",
       name: "Sofia R.",
-      detail: "Kitesurfer • Round One",
+      detail: "Kitesurfer • Year One",
     },
     {
       quote:
         "Every detail was handled—gear, safety, food, good people. Knowing half the proceeds went to Slow is Pro made it even better.",
       name: "James & Elena K.",
-      detail: "Private cabin • Round One",
+      detail: "Private cabin • Year One",
     },
   ]
 

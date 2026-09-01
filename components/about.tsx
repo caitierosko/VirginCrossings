@@ -3,7 +3,7 @@ import { Anchor, Users, Heart, Shield } from "lucide-react"
 export function About() {
   const badges = [
     { icon: Shield, label: "Chase Support" },
-    { icon: Anchor, label: "Crewed Catamarans" },
+    { icon: Anchor, label: "Captained Catamarans" },
     { icon: Users, label: "Small Group" },
     { icon: Heart, label: "Gives Back (50%)" },
   ]
@@ -14,7 +14,7 @@ export function About() {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-bold text-[#0A2540] mb-6 text-balance">About the Experience</h2>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto text-pretty">
-            Hosted by Virgin CROSSings, this is a wing-foil and kitesurf expedition across the BVI—downwind lines, reef
+            Hosted by Virgin Crossings, this is a wingfoil and kitesurf expedition across the BVI. Downwind lines, reef
             passes, and open-water glides with your crewed catamarans running chase support. Whether you&apos;re on a
             wing or a kite, you&apos;ll ride some of the most beautiful, consistent trade-wind conditions in the
             Caribbean.{" "}

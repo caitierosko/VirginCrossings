@@ -25,8 +25,8 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/80 via-[#0A2540]/60 to-[#0891B2]/50" />
       </div>
       <div className="container mx-auto max-w-5xl text-center relative z-10">
-        <div className="inline-block bg-[#F59E0B] text-[#0A2540] px-5 py-2 rounded-full text-sm md:text-base font-bold mb-6 uppercase tracking-wide">
-          Round Two • 2027
+        <div className="inline-block bg-[#11888e] text-white px-5 py-2 rounded-full text-sm md:text-base font-bold mb-6 uppercase tracking-wide">
+          Year Two • 2027
         </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance leading-tight">
           Wing-Foil & Kitesurf Island Crossings in the BVI

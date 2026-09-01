@@ -1,6 +1,6 @@
 export function Recap() {
   const stats = [
-    { value: "7", label: "Days of crossings" },
+    { value: "7", label: "Days in the BVI" },
     { value: "100%", label: "Cabins sold out" },
     { value: "50%", label: "Proceeds donated" },
     { value: "1", label: "Unforgettable crew" },
@@ -11,15 +11,14 @@ export function Recap() {
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-12">
           <span className="inline-block bg-[#0891B2]/20 text-[#5EC8DE] px-4 py-1.5 rounded-full text-sm font-semibold mb-4 uppercase tracking-wide">
-            Round One Recap
+            Year One Recap
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 text-balance">
-            The First Edition Was a Sell-Out Success
+            Year One Was a Sell-Out Success
           </h2>
           <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto text-pretty">
             Our inaugural flotilla brought together riders from across the globe for a week of downwind lines, reef
-            passes, and sunset rafts-ups. Round Two builds on everything that made it special—now with kitesurfing in
-            the mix.
+            passes, and sunset rafts-ups. Round Two builds on everything that made it special.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8 items-center">

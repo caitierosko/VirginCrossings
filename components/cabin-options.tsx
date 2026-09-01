@@ -28,7 +28,7 @@ export function CabinOptions() {
             <div className="w-16 h-16 rounded-full bg-[#0891B2]/10 flex items-center justify-center mx-auto mb-4">
               <Anchor className="w-8 h-8 text-[#0891B2]" />
             </div>
-            <CardTitle className="text-2xl md:text-3xl text-[#0A2540]">Cabin with Ensuite</CardTitle>
+            <CardTitle className="text-2xl md:text-3xl text-[#0A2540]">Luxury Cabin with Private Ensuite Bathroom</CardTitle>
             <CardDescription className="text-4xl md:text-5xl font-bold text-[#0891B2] mt-4">
               $7,000
               <span className="text-lg text-gray-600 font-normal"> / cabin</span>

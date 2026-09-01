@@ -2,8 +2,8 @@ import { Check, X } from "lucide-react"
 
 export function DatesInclusions() {
   const included = [
-    "7 nights aboard crewed Bali 4.8 catamarans",
-    "Captain + Chef/Host",
+    "7 nights aboard a luxury catamaran",
+    "Captain + Host/Gear Guide",
     "Breakfast daily + one onboard meal per day",
     "Beer, wine, seltzers & standard bar",
     "Daily route planning & safety briefings",
@@ -15,7 +15,7 @@ export function DatesInclusions() {
     "Flights",
     "Airport/ferry transfers",
     "Some meals ashore",
-    "Trip insurance",
+    "Trip insurance and Crew Gratuity",
     "Wing & kite gear",
   ]
 
@@ -28,8 +28,7 @@ export function DatesInclusions() {
             February 8–15, 2027 • British Virgin Islands
           </p>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto text-pretty leading-relaxed">
-            Your first night is a sleep-aboard—the boat stays docked so everyone can arrive on the 8th, then we set sail
-            the morning of the 9th.
+            Your first night is a sleep-aboard. The boat stays docked so everyone can arrive on the 8th, then we set sail the morning of the 9th.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">

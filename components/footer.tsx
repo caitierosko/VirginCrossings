@@ -3,7 +3,7 @@ export function Footer() {
     <footer className="bg-[#0A2540] text-white py-8 px-4">
       <div className="container mx-auto max-w-5xl">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-300">© 2026 Virgin Wakes x UC Yacht Charters • Slow is Pro beneficiary</p>
+          <p className="text-sm text-gray-300">© 2026 Virgin Crossings</p>
           <div className="flex gap-6">
             <a href="#terms" className="text-sm text-gray-300 hover:text-white transition-colors">
               Terms
