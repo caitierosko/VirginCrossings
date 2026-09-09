@@ -1,17 +1,28 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Open_Sans, Lato, Raleway, Nunito, Quicksand, Manrope, DM_Sans, Space_Grotesk, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 // <CHANGE> Using Inter font for modern sans-serif
 const inter = Inter({ subsets: ["latin"] })
 
+// Additional font imports
+const openSans = Open_Sans({ subsets: ["latin"] })
+const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] })
+const raleway = Raleway({ subsets: ["latin"] })
+const nunito = Nunito({ subsets: ["latin"] })
+const quicksand = Quicksand({ subsets: ["latin"] })
+const manrope = Manrope({ subsets: ["latin"] })
+const dmSans = DM_Sans({ subsets: ["latin"] })
+const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] })
+
 // <CHANGE> Updated metadata for Virgin CROSSings landing page with SEO
 export const metadata: Metadata = {
-  title: "Virgin CROSSings — Wing-Foil Flotilla in the BVI (Feb 7–14, 2026)",
+  title: "Virgin CROSSings — Wing-Foil & Kitesurf Flotilla in the BVI (Feb 8–15, 2027)",
   description:
-    "A 7-day wing-foil expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans. 50% of proceeds to Slow is Pro.",
+    "Round Two for 2027! A 7-day wing-foil and kitesurf expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans. 50% of proceeds to Slow is Pro.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -31,9 +42,9 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   openGraph: {
-    title: "Virgin CROSSings — Wing-Foil Flotilla in the BVI",
+    title: "Virgin CROSSings — Wing-Foil & Kitesurf Flotilla in the BVI (Round Two 2027)",
     description:
-      "A 7-day wing-foil expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans.",
+      "Round Two for 2027! A 7-day wing-foil and kitesurf expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans.",
     type: "website",
     locale: "en_US",
   },
@@ -61,13 +72,13 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Event",
-              name: "Virgin CROSSings",
-              description: "A 7-day wing-foil flotilla across the British Virgin Islands",
-              startDate: "2026-02-07",
-              endDate: "2026-02-14",
+              name: "Virgin CROSSings — Round Two 2027",
+              description: "A 7-day wing-foil and kitesurf flotilla across the British Virgin Islands",
+              startDate: "2027-02-08",
+              endDate: "2027-02-15",
               location: {
                 "@type": "Place",
-                name: "Tortola, British Virgin Islands",
+                name: "British Virgin Islands",
                 address: {
                   "@type": "PostalAddress",
                   addressCountry: "VG",
@@ -76,16 +87,16 @@ export default function RootLayout({
               offers: [
                 {
                   "@type": "Offer",
-                  price: "2500",
+                  price: "7000",
                   priceCurrency: "USD",
-                  name: "Shared Bunk Cabin",
+                  name: "Cabin with Ensuite",
                   availability: "https://schema.org/LimitedAvailability",
                 },
                 {
                   "@type": "Offer",
-                  price: "4500",
+                  price: "3500",
                   priceCurrency: "USD",
-                  name: "Private Queen Cabin",
+                  name: "Per Person (Shared Cabin)",
                   availability: "https://schema.org/LimitedAvailability",
                 },
               ],

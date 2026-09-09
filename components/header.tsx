@@ -25,7 +25,7 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <h1 className="text-2xl md:text-3xl font-bold text-[#0A2540]">Virgin CROSSings</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-[#0A2540]">Virgin Crossings</h1>
         <Button
           onClick={scrollToForm}
           size="lg"
