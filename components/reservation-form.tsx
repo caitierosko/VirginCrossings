@@ -42,19 +42,19 @@ export function ReservationForm() {
 
   if (isSuccess) {
     return (
-      <section id="reservation-form" className="py-20 px-4 bg-gradient-to-b from-[#F0F9FF] to-white">
+      <section id="reservation-form" className="py-24 px-4 bg-gradient-to-b from-[#FAF8F3] to-white">
         <div className="container mx-auto max-w-2xl">
-          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border-2 border-[#0891B2] text-center">
-            <CheckCircle2 className="w-16 h-16 text-[#0891B2] mx-auto mb-6" />
-            <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-4">You're in! 🌬️</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              We've received your request. We'll email deposit details and your Welcome Packet shortly. Check your inbox
-              (and spam).
+          <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-[#C6A667]/40 text-center">
+            <CheckCircle2 className="w-16 h-16 text-[#C6A667] mx-auto mb-6" />
+            <h2 className="font-serif text-3xl md:text-5xl font-medium text-[#0A2540] mb-4">Welcome Aboard</h2>
+            <p className="text-lg text-gray-600 leading-relaxed mb-6 font-light">
+              We&apos;ve received your request. Our team will be in touch shortly with deposit details and your
+              charter brochure. Please check your inbox (and spam).
             </p>
             <Button
               onClick={() => setIsSuccess(false)}
               variant="outline"
-              className="border-[#0891B2] text-[#0891B2] hover:bg-[#0891B2] hover:text-white rounded-full"
+              className="border-[#C6A667] text-[#B0904E] hover:bg-[#C6A667] hover:text-[#0A2540] rounded-full"
             >
               Submit Another Reservation
             </Button>
@@ -65,12 +65,17 @@ export function ReservationForm() {
   }
 
   return (
-    <section id="reservation-form" className="py-20 px-4 bg-gradient-to-b from-[#F0F9FF] to-white scroll-mt-20">
+    <section id="reservation-form" className="py-24 px-4 bg-gradient-to-b from-[#FAF8F3] to-white scroll-mt-20">
       <div className="container mx-auto max-w-2xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0A2540] mb-4 text-balance">Reserve Your Cabin</h2>
-          <p className="text-gray-600 text-lg">
-            Fill out the form below and we'll get back to you with deposit details
+          <span className="inline-block text-[#C6A667] uppercase tracking-[0.3em] text-xs font-medium mb-4">
+            Reservations
+          </span>
+          <h2 className="font-serif text-4xl md:text-6xl font-medium text-[#0A2540] mb-4 text-balance">
+            Reserve Your Cabin
+          </h2>
+          <p className="text-gray-600 text-lg font-light">
+            Share a few details and our team will follow up with deposit details.
           </p>
         </div>
         <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-8 md:p-12 shadow-xl space-y-6">
@@ -97,16 +102,20 @@ export function ReservationForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="cabin">Cabin Selection *</Label>
-            <Select name="cabin" required>
+            <Label htmlFor="cabins">Number of Cabins *</Label>
+            <Select name="cabins" required>
               <SelectTrigger className="rounded-xl">
-                <SelectValue placeholder="Select cabin type" />
+                <SelectValue placeholder="Select number of cabins" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="full-cabin">Full Cabin ($7,000)</SelectItem>
-                <SelectItem value="per-person">Per Person, Share a Cabin ($3,500)</SelectItem>
+                <SelectItem value="1">1 Cabin — $10,000</SelectItem>
+                <SelectItem value="2">2 Cabins — $20,000</SelectItem>
+                <SelectItem value="3">3 Cabins — $30,000</SelectItem>
+                <SelectItem value="4">4 Cabins — $40,000</SelectItem>
+                <SelectItem value="5">5 Cabins — $50,000</SelectItem>
               </SelectContent>
             </Select>
+            <p className="text-sm text-gray-500">$10,000 per cabin, up to two guests each.</p>
           </div>
 
           <div className="space-y-2">
@@ -116,10 +125,11 @@ export function ReservationForm() {
                 <SelectValue placeholder="Select number" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="1">1</SelectItem>
-                <SelectItem value="2">2</SelectItem>
-                <SelectItem value="3">3</SelectItem>
-                <SelectItem value="4">4</SelectItem>
+                {[1, 2, 3, 4, 5, 6, 7, 8].map((n) => (
+                  <SelectItem key={n} value={String(n)}>
+                    {n}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>
@@ -192,10 +202,10 @@ export function ReservationForm() {
               <Checkbox id="terms" name="terms" required />
               <Label htmlFor="terms" className="font-normal leading-relaxed cursor-pointer">
                 I agree to the{" "}
-                <a href="#terms" className="text-[#0891B2] hover:underline">
-                  trip terms
+                <a href="#terms" className="text-[#B0904E] hover:underline">
+                  charter terms
                 </a>{" "}
-                and understand a deposit is required to secure my spot. *
+                and understand a $10,000 deposit per cabin is required to secure my reservation. *
               </Label>
             </div>
             <div className="flex items-start space-x-2">
@@ -211,7 +221,7 @@ export function ReservationForm() {
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-[#0891B2] hover:bg-[#0E7490] text-white rounded-full py-6 text-lg font-semibold"
+            className="w-full bg-[#C6A667] hover:bg-[#B0904E] text-[#0A2540] rounded-full py-6 text-lg font-semibold"
           >
             {isSubmitting ? (
               <>

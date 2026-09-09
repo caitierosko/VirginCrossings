@@ -11,7 +11,7 @@ export async function submitReservation(formData: FormData) {
       name: formData.get("name"),
       email: formData.get("email"),
       phone: formData.get("phone"),
-      cabin: formData.get("cabin"),
+      cabins: formData.get("cabins"),
       guests: formData.get("guests"),
       skill: formData.get("skill"),
       arrival: formData.get("arrival"),
@@ -28,7 +28,7 @@ export async function submitReservation(formData: FormData) {
       !data.name ||
       !data.email ||
       !data.phone ||
-      !data.cabin ||
+      !data.cabins ||
       !data.guests ||
       !data.skill ||
       !data.arrival ||
@@ -59,19 +59,19 @@ export async function submitReservation(formData: FormData) {
 async function sendConfirmationEmail(data: any) {
   try {
     await resend.emails.send({
-      from: "Virgin CROSSings <onboarding@resend.dev>", // Swap for your verified domain once set up in Resend
+      from: "Virgin Crossings <onboarding@resend.dev>", // Swap for your verified domain once set up in Resend
       to: data.email as string,
-      subject: "Your Virgin CROSSings Reservation Request",
+      subject: "Your Virgin Crossings Reservation Request",
       html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h1 style="color: #0891B2;">You're in! 🌬️</h1>
-          <p>Hi ${data.name},</p>
-          <p>We've received your reservation request for the <strong>Virgin CROSSings Wing-Foil Flotilla</strong> (Feb 14-20, 2025).</p>
-          
-          <div style="background: #F0F9FF; padding: 20px; border-radius: 12px; margin: 20px 0;">
-            <h3 style="margin-top: 0;">Your Details:</h3>
+        <div style="font-family: Georgia, 'Times New Roman', serif; max-width: 600px; margin: 0 auto; color: #0A2540;">
+          <h1 style="color: #0A2540; font-weight: 500;">Welcome Aboard</h1>
+          <p>Dear ${data.name},</p>
+          <p>Thank you for your reservation request for the <strong>Virgin Crossings all-inclusive private yacht charter</strong> (February 8&ndash;15, 2027, British Virgin Islands).</p>
+
+          <div style="background: #FAF8F3; padding: 20px; border-radius: 12px; margin: 20px 0; border: 1px solid #C6A667;">
+            <h3 style="margin-top: 0; color: #0A2540;">Your Details</h3>
             <ul style="line-height: 1.8;">
-              <li><strong>Cabin:</strong> ${data.cabin}</li>
+              <li><strong>Cabins:</strong> ${data.cabins} ($10,000 per cabin)</li>
               <li><strong>Guests:</strong> ${data.guests}</li>
               <li><strong>Skill Level:</strong> ${data.skill}</li>
               <li><strong>Arrival:</strong> ${data.arrival}</li>
@@ -80,21 +80,21 @@ async function sendConfirmationEmail(data: any) {
             </ul>
           </div>
 
-          <h3>What's Next?</h3>
+          <h3 style="color: #0A2540;">What Happens Next</h3>
           <ol style="line-height: 1.8;">
-            <li>We'll send you deposit details within 24 hours</li>
-            <li>Once paid, you'll receive your Welcome Packet</li>
-            <li>Join the WhatsApp group for trip updates</li>
+            <li>Our team will send deposit details shortly</li>
+            <li>Once your deposit is received, we'll share your charter brochure</li>
+            <li>We'll stay in touch with everything you need before you sail</li>
           </ol>
 
-          <p>Questions? Reply to this email or WhatsApp us at +1-XXX-XXX-XXXX</p>
-          
-          <p style="color: #0891B2; font-weight: bold;">See you in the BVI! 🏝️</p>
-          
+          <p>Questions? Simply reply to this email and we'll be glad to help.</p>
+
+          <p style="color: #B0904E; font-weight: bold;">We look forward to welcoming you in the BVI.</p>
+
           <hr style="border: none; border-top: 1px solid #E5E7EB; margin: 30px 0;" />
           <p style="color: #6B7280; font-size: 12px;">
-            Virgin CROSSings | February 14-20, 2025<br />
-            British Virgin Islands
+            Virgin Crossings &bull; Private Yacht Charters<br />
+            February 8&ndash;15, 2027 &bull; British Virgin Islands
           </p>
         </div>
       `,
@@ -108,7 +108,7 @@ async function sendConfirmationEmail(data: any) {
 async function sendAdminNotification(data: any) {
   try {
     await resend.emails.send({
-      from: "Virgin CROSSings <onboarding@resend.dev>", // Swap for your verified domain once set up in Resend
+      from: "Virgin Crossings <onboarding@resend.dev>", // Swap for your verified domain once set up in Resend
       to: "grantfleming@bellsouth.net", // Admin notification recipient
       replyTo: data.email as string,
       subject: `New Reservation: ${data.name}`,
@@ -119,7 +119,7 @@ async function sendAdminNotification(data: any) {
             <tr><td style="padding: 8px; border: 1px solid #ddd;"><strong>Name:</strong></td><td style="padding: 8px; border: 1px solid #ddd;">${data.name}</td></tr>
             <tr><td style="padding: 8px; border: 1px solid #ddd;"><strong>Email:</strong></td><td style="padding: 8px; border: 1px solid #ddd;">${data.email}</td></tr>
             <tr><td style="padding: 8px; border: 1px solid #ddd;"><strong>Phone:</strong></td><td style="padding: 8px; border: 1px solid #ddd;">${data.phone}</td></tr>
-            <tr><td style="padding: 8px; border: 1px solid #ddd;"><strong>Cabin:</strong></td><td style="padding: 8px; border: 1px solid #ddd;">${data.cabin}</td></tr>
+            <tr><td style="padding: 8px; border: 1px solid #ddd;"><strong>Cabins:</strong></td><td style="padding: 8px; border: 1px solid #ddd;">${data.cabins}</td></tr>
             <tr><td style="padding: 8px; border: 1px solid #ddd;"><strong>Guests:</strong></td><td style="padding: 8px; border: 1px solid #ddd;">${data.guests}</td></tr>
             <tr><td style="padding: 8px; border: 1px solid #ddd;"><strong>Skill:</strong></td><td style="padding: 8px; border: 1px solid #ddd;">${data.skill}</td></tr>
             <tr><td style="padding: 8px; border: 1px solid #ddd;"><strong>Arrival:</strong></td><td style="padding: 8px; border: 1px solid #ddd;">${data.arrival}</td></tr>
@@ -166,7 +166,7 @@ async function addToGoogleSheet(data: any) {
       data.name,
       data.email,
       data.phone,
-      data.cabin,
+      data.cabins,
       data.guests,
       data.skill,
       data.arrival,

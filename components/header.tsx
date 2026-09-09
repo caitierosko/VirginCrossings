@@ -25,11 +25,26 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <h1 className="text-2xl md:text-3xl font-bold text-[#0A2540]">Virgin Crossings</h1>
+        <div className="flex flex-col leading-none">
+          <span
+            className={`font-serif text-2xl md:text-3xl font-semibold tracking-tight transition-colors ${
+              isSticky ? "text-[#0A2540]" : "text-white"
+            }`}
+          >
+            Virgin Crossings
+          </span>
+          <span
+            className={`text-[0.6rem] md:text-xs uppercase tracking-[0.25em] mt-1 transition-colors ${
+              isSticky ? "text-[#C6A667]" : "text-[#E4CE9B]"
+            }`}
+          >
+            Private Yacht Charters
+          </span>
+        </div>
         <Button
           onClick={scrollToForm}
           size="lg"
-          className="bg-[#0891B2] hover:bg-[#0E7490] text-white rounded-full px-6 md:px-8"
+          className="bg-[#C6A667] hover:bg-[#B0904E] text-[#0A2540] font-semibold rounded-full px-6 md:px-8"
         >
           Reserve a Cabin
         </Button>

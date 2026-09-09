@@ -11,35 +11,47 @@ export function CabinOptions() {
 
   const features = [
     "Private cabin with ensuite bathroom",
-    "Shower & facilities in every cabin",
-    "$3,500 per person (two per cabin)",
-    "Full yacht amenities included",
+    "Up to two guests per cabin",
+    "All meals by a private chef & open bar",
+    "Full run of a fully crewed luxury yacht",
   ]
 
   return (
-    <section className="py-20 px-4 bg-[#F0F9FF]">
+    <section className="py-24 px-4 bg-[#FAF8F3]">
       <div className="container mx-auto max-w-2xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0A2540] mb-4 text-balance">Cabin Options & Pricing</h2>
-          <p className="text-gray-600 text-lg">Limited availability • Deposit required to secure</p>
+          <span className="inline-block text-[#C6A667] uppercase tracking-[0.3em] text-xs font-medium mb-4">
+            Reserve by the Cabin
+          </span>
+          <h2 className="font-serif text-4xl md:text-6xl font-medium text-[#0A2540] mb-4 text-balance">
+            One Rate. One Cabin.
+          </h2>
+          <p className="text-gray-600 text-lg font-light">
+            Book anywhere from one to five cabins. Once a yacht is full, we open the next.
+          </p>
         </div>
-        <Card className="relative overflow-hidden border-2 border-[#0891B2] shadow-xl">
-          <CardHeader className="text-center pb-8 pt-8">
-            <div className="w-16 h-16 rounded-full bg-[#0891B2]/10 flex items-center justify-center mx-auto mb-4">
-              <Anchor className="w-8 h-8 text-[#0891B2]" />
+        <Card className="relative overflow-hidden border border-[#C6A667]/40 shadow-xl">
+          <div className="h-1.5 w-full bg-[#C6A667]" />
+          <CardHeader className="text-center pb-8 pt-10">
+            <div className="w-16 h-16 rounded-full bg-[#C6A667]/15 flex items-center justify-center mx-auto mb-4">
+              <Anchor className="w-8 h-8 text-[#C6A667]" />
             </div>
-            <CardTitle className="text-2xl md:text-3xl text-[#0A2540]">Luxury Cabin with Private Ensuite Bathroom</CardTitle>
-            <CardDescription className="text-4xl md:text-5xl font-bold text-[#0891B2] mt-4">
-              $7,000
-              <span className="text-lg text-gray-600 font-normal"> / cabin</span>
+            <CardTitle className="font-serif text-2xl md:text-3xl font-medium text-[#0A2540]">
+              Private Cabin with Ensuite
+            </CardTitle>
+            <CardDescription className="font-serif text-5xl md:text-6xl font-medium text-[#0A2540] mt-4">
+              $10,000
+              <span className="font-sans text-lg text-gray-500 font-normal"> / cabin</span>
             </CardDescription>
-            <p className="text-base text-gray-600 mt-2">or $3,500 per person for the week</p>
+            <p className="text-base text-gray-600 mt-2 font-light">
+              Your deposit reserves the cabin for the full week
+            </p>
           </CardHeader>
           <CardContent className="space-y-6">
             <ul className="space-y-3">
               {features.map((feature, idx) => (
-                <li key={idx} className="flex items-center gap-2 text-gray-700">
-                  <div className="w-2 h-2 rounded-full bg-[#0891B2]" />
+                <li key={idx} className="flex items-center gap-3 text-gray-700">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#C6A667]" />
                   {feature}
                 </li>
               ))}
@@ -49,7 +61,7 @@ export function CabinOptions() {
             </p>
             <Button
               onClick={scrollToForm}
-              className="w-full rounded-full py-6 text-lg bg-[#0891B2] hover:bg-[#0E7490] text-white"
+              className="w-full rounded-full py-6 text-lg bg-[#C6A667] hover:bg-[#B0904E] text-[#0A2540] font-semibold"
             >
               Reserve Now
             </Button>

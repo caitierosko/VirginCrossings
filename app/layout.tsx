@@ -1,28 +1,24 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Inter, Open_Sans, Lato, Raleway, Nunito, Quicksand, Manrope, DM_Sans, Space_Grotesk, JetBrains_Mono } from "next/font/google"
+import { Inter, Cormorant_Garamond } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-// <CHANGE> Using Inter font for modern sans-serif
-const inter = Inter({ subsets: ["latin"] })
+// Clean modern sans-serif for body copy and UI
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
-// Additional font imports
-const openSans = Open_Sans({ subsets: ["latin"] })
-const lato = Lato({ subsets: ["latin"], weight: ["400", "700"] })
-const raleway = Raleway({ subsets: ["latin"] })
-const nunito = Nunito({ subsets: ["latin"] })
-const quicksand = Quicksand({ subsets: ["latin"] })
-const manrope = Manrope({ subsets: ["latin"] })
-const dmSans = DM_Sans({ subsets: ["latin"] })
-const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] })
+// Elegant serif for luxury display headings
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-cormorant",
+})
 
-// <CHANGE> Updated metadata for Virgin CROSSings landing page with SEO
+// <CHANGE> Updated metadata for Virgin Crossings all-inclusive charter with SEO
 export const metadata: Metadata = {
-  title: "Virgin CROSSings — Wing-Foil & Kitesurf Flotilla in the BVI (Feb 8–15, 2027)",
+  title: "Virgin Crossings — All-Inclusive Private Yacht Charter in the BVI (Feb 8–15, 2027)",
   description:
-    "Round Two for 2027! A 7-day wing-foil and kitesurf expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans. 50% of proceeds to Slow is Pro.",
+    "An all-inclusive private yacht charter across the British Virgin Islands. Crewed catamarans with captain and private chef, book by the cabin. A curated week on the water for 2027.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -42,9 +38,9 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   openGraph: {
-    title: "Virgin CROSSings — Wing-Foil & Kitesurf Flotilla in the BVI (Round Two 2027)",
+    title: "Virgin Crossings — All-Inclusive Private Yacht Charter in the BVI (2027)",
     description:
-      "Round Two for 2027! A 7-day wing-foil and kitesurf expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans.",
+      "An all-inclusive private yacht charter across the British Virgin Islands. Crewed catamarans with captain and private chef, booked by the cabin.",
     type: "website",
     locale: "en_US",
   },
@@ -64,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`bg-background ${inter.variable} ${cormorant.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -72,8 +68,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Event",
-              name: "Virgin CROSSings — Round Two 2027",
-              description: "A 7-day wing-foil and kitesurf flotilla across the British Virgin Islands",
+              name: "Virgin Crossings — 2027 Charter",
+              description:
+                "An all-inclusive private yacht charter across the British Virgin Islands, booked by the cabin",
               startDate: "2027-02-08",
               endDate: "2027-02-15",
               location: {
@@ -87,16 +84,9 @@ export default function RootLayout({
               offers: [
                 {
                   "@type": "Offer",
-                  price: "7000",
+                  price: "10000",
                   priceCurrency: "USD",
-                  name: "Cabin with Ensuite",
-                  availability: "https://schema.org/LimitedAvailability",
-                },
-                {
-                  "@type": "Offer",
-                  price: "3500",
-                  priceCurrency: "USD",
-                  name: "Per Person (Shared Cabin)",
+                  name: "Private Cabin with Ensuite",
                   availability: "https://schema.org/LimitedAvailability",
                 },
               ],
@@ -104,7 +94,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} font-sans antialiased`}>
+      <body className="font-sans antialiased">
         {children}
         <Analytics />
       </body>

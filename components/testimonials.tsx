@@ -4,44 +4,51 @@ export function Testimonials() {
   const testimonials = [
     {
       quote:
-        "The best week of riding in my life. Crossing between islands with the chase boat right there gave me the confidence to push way further than I ever have.",
+        "The most effortless luxury we've experienced. Waking to the chef's breakfast at anchor, a new island each day — it felt entirely our own.",
       name: "Marcus T.",
-      detail: "Wing foiler • Year One",
+      detail: "Inaugural Charter",
     },
     {
       quote:
-        "Flawless organization, incredible crew, and downwinders that felt straight out of a dream. I already told my whole crew we're booking Round Two.",
+        "Flawless from the first email to the last sunset. The crew anticipated everything. We've already reserved our cabins for next year.",
       name: "Sofia R.",
-      detail: "Kitesurfer • Year One",
+      detail: "Inaugural Charter",
     },
     {
       quote:
-        "Every detail was handled—gear, safety, food, good people. Knowing half the proceeds went to Slow is Pro made it even better.",
+        "Booking by the cabin meant we shared the yacht with wonderful people. Every detail was handled with real care and taste.",
       name: "James & Elena K.",
-      detail: "Private cabin • Year One",
+      detail: "Private Cabin",
     },
   ]
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-24 px-4 bg-white">
       <div className="container mx-auto max-w-5xl">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-[#0A2540] mb-4 text-balance">What Riders Are Saying</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty">
-            Straight from the crew who joined our first edition.
+        <div className="text-center mb-14">
+          <span className="inline-block text-[#C6A667] uppercase tracking-[0.3em] text-xs font-medium mb-4">
+            Guest Stories
+          </span>
+          <h2 className="font-serif text-4xl md:text-6xl font-medium text-[#0A2540] mb-4 text-balance">
+            In Their Words
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto text-pretty font-light">
+            From the guests who joined our first season.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, index) => (
             <figure
               key={index}
-              className="flex flex-col gap-4 p-8 rounded-3xl bg-[#F0F9FF] border border-[#0891B2]/15"
+              className="flex flex-col gap-4 p-8 rounded-3xl bg-[#FAF8F3] border border-[#C6A667]/20"
             >
-              <Quote className="w-8 h-8 text-[#0891B2]" aria-hidden="true" />
-              <blockquote className="text-gray-700 leading-relaxed text-pretty flex-1">{t.quote}</blockquote>
+              <Quote className="w-8 h-8 text-[#C6A667]" aria-hidden="true" />
+              <blockquote className="text-gray-700 leading-relaxed text-pretty flex-1 font-light italic">
+                {t.quote}
+              </blockquote>
               <figcaption className="mt-2">
                 <p className="font-semibold text-[#0A2540]">{t.name}</p>
-                <p className="text-sm text-[#0E7490]">{t.detail}</p>
+                <p className="text-sm text-[#B0904E]">{t.detail}</p>
               </figcaption>
             </figure>
           ))}
