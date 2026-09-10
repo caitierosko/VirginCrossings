@@ -29,14 +29,13 @@ export function Hero() {
           Year Two • 2027
         </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance leading-tight" style={{ fontFamily: '"JetBrains Mono", monospace' }}>
-          Wind Dont Wait
+          Wind Don&apos;t Wait
         </h1>
         <p className="text-xl md:text-2xl text-white/90 mb-4 font-medium">
           Feb 13–20, 2027 • British Virgin Islands
         </p>
         <p className="text-lg md:text-xl text-white/80 mb-10 max-w-3xl mx-auto text-pretty leading-relaxed">
-          After a sold-out first edition, we&apos;re back for Round Two—a 7-day wing-foil and kitesurf flotilla with
-          real island crossings, chase-boat support, crewed catamarans, and good-energy community.
+          After a sold-out first edition, we&apos;re back for Round Two. A 7-day wing-foil and kitesurf adventure with real island crossings, chase-boat support, luxury crewed catamarans, and good-energy community.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Button
