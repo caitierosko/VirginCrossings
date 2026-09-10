@@ -28,7 +28,7 @@ export function DatesInclusions() {
             February 13–20, 2027 • British Virgin Islands
           </p>
           <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto text-pretty leading-relaxed">
-            Welcome to the BVI - Board your yacht on Feb 12th any time after 4pm. The boat stays docked overnight so everyone can arrive on the 12th, then we set sail the morning of the 13th for 6 incredible nights.
+            Welcome to the BVI - Board your yacht on Feb 13th any time after 4pm. The boat stays docked overnight so everyone can arrive on the 13th, then we set sail the morning of the 14th for 6 incredible nights.
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
