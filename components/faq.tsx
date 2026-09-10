@@ -17,12 +17,12 @@ export function FAQ() {
     },
     {
       question: "What about connectivity?",
-      answer: "Basic Wi-Fi is available; consider an eSIM if you need stronger connectivity.",
+      answer: "Yes—there will be Wi-Fi on board.",
     },
     {
       question: "What's the arrival timing?",
       answer:
-        "Arrive on Feb 8, 2027. The first night is a sleep-aboard—the boat stays at the dock overnight so everyone has time to get in, then we depart the morning of the 9th.",
+        "Arrive on Feb 12, 2027. The first night is a sleep-aboard, so the yacht stays at the dock overnight so everyone has time to get in. You are allowed to board any time after 4pm on the 12th. No meals will be provided until the next morning. The yachts will depart the morning of the 13th.",
     },
     {
       question: "Which charity benefits from this?",

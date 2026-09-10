@@ -97,14 +97,17 @@ export function ReservationForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="cabin">Cabin Selection *</Label>
+            <Label htmlFor="cabin">Number of Cabins * ($10,000 each)</Label>
             <Select name="cabin" required>
               <SelectTrigger className="rounded-xl">
-                <SelectValue placeholder="Select cabin type" />
+                <SelectValue placeholder="Select number of cabins" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="full-cabin">Full Cabin ($7,000)</SelectItem>
-                <SelectItem value="per-person">Per Person, Share a Cabin ($3,500)</SelectItem>
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <SelectItem key={n} value={String(n)}>
+                    {n} {n === 1 ? "cabin" : "cabins"}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>
@@ -116,16 +119,17 @@ export function ReservationForm() {
                 <SelectValue placeholder="Select number" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="1">1</SelectItem>
-                <SelectItem value="2">2</SelectItem>
-                <SelectItem value="3">3</SelectItem>
-                <SelectItem value="4">4</SelectItem>
+                {Array.from({ length: 10 }, (_, i) => i + 1).map((n) => (
+                  <SelectItem key={n} value={String(n)}>
+                    {n}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="skill">Wing Skill Level *</Label>
+            <Label htmlFor="skill">Wing / Kite Skill Level *</Label>
             <Select name="skill" required>
               <SelectTrigger className="rounded-xl">
                 <SelectValue placeholder="Select skill level" />
