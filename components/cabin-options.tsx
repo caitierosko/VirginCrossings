@@ -10,9 +10,9 @@ export function CabinOptions() {
   }
 
   const features = [
-    "Private cabin with ensuite bathroom",
+    "Private cabin aboard a luxury catamaran with ensuite bathroom",
     "Shower & facilities in every cabin",
-    "$3,500 per person (two per cabin)",
+    "$5,000 per person (two per cabin)",
     "Full yacht amenities included",
   ]
 
@@ -28,12 +28,12 @@ export function CabinOptions() {
             <div className="w-16 h-16 rounded-full bg-[#0891B2]/10 flex items-center justify-center mx-auto mb-4">
               <Anchor className="w-8 h-8 text-[#0891B2]" />
             </div>
-            <CardTitle className="text-2xl md:text-3xl text-[#0A2540]">Luxury Cabin with Private Ensuite Bathroom</CardTitle>
+            <CardTitle className="text-2xl md:text-3xl text-[#0A2540]">Luxury Double Cabin with Private Ensuite Bathroom</CardTitle>
             <CardDescription className="text-4xl md:text-5xl font-bold text-[#0891B2] mt-4">
-              $7,000
+              $10,000
               <span className="text-lg text-gray-600 font-normal"> / cabin</span>
             </CardDescription>
-            <p className="text-base text-gray-600 mt-2">or $3,500 per person for the week</p>
+            <p className="text-base text-gray-600 mt-2">or $5,000 per person for the week</p>
           </CardHeader>
           <CardContent className="space-y-6">
             <ul className="space-y-3">

@@ -3,6 +3,7 @@ import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
 import { Recap } from "@/components/recap"
 import { DatesInclusions } from "@/components/dates-inclusions"
+import { Fleet } from "@/components/fleet"
 import { CabinOptions } from "@/components/cabin-options"
 import { WhoItsFor } from "@/components/who-its-for"
 import { Testimonials } from "@/components/testimonials"
@@ -20,6 +21,7 @@ export default function Page() {
         <About />
         <Recap />
         <DatesInclusions />
+        <Fleet />
         <CabinOptions />
         <WhoItsFor />
         <Testimonials />

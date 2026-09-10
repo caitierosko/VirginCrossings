@@ -3,7 +3,7 @@ export function Recap() {
     { value: "7", label: "Days in the BVI" },
     { value: "100%", label: "Cabins sold out" },
     { value: "50%", label: "Proceeds donated" },
-    { value: "1", label: "Unforgettable crew" },
+    { value: "2", label: "Unforgettable crews" },
   ]
 
   return (

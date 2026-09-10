@@ -18,7 +18,7 @@ export function Testimonials() {
       quote:
         "Every detail was handled—gear, safety, food, good people. Knowing half the proceeds went to Slow is Pro made it even better.",
       name: "James & Elena K.",
-      detail: "Private cabin • Year One",
+      detail: "Wing and Kite Couple • Year One",
     },
   ]
 

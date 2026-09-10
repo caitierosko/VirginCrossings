@@ -20,7 +20,7 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] })
 
 // <CHANGE> Updated metadata for Virgin CROSSings landing page with SEO
 export const metadata: Metadata = {
-  title: "Virgin CROSSings — Wing-Foil & Kitesurf Flotilla in the BVI (Feb 8–15, 2027)",
+  title: "Virgin Crossings — Wing-Foil & Kitesurf Expedition in the BVI (Feb 13–20, 2027)",
   description:
     "Round Two for 2027! A 7-day wing-foil and kitesurf expedition across the British Virgin Islands. Real crossings, chase-boat support, crewed catamarans. 50% of proceeds to Slow is Pro.",
   generator: "v0.app",
@@ -74,8 +74,8 @@ export default function RootLayout({
               "@type": "Event",
               name: "Virgin CROSSings — Round Two 2027",
               description: "A 7-day wing-foil and kitesurf flotilla across the British Virgin Islands",
-              startDate: "2027-02-08",
-              endDate: "2027-02-15",
+              startDate: "2027-02-13",
+              endDate: "2027-02-20",
               location: {
                 "@type": "Place",
                 name: "British Virgin Islands",
@@ -87,14 +87,14 @@ export default function RootLayout({
               offers: [
                 {
                   "@type": "Offer",
-                  price: "7000",
+                  price: "10000",
                   priceCurrency: "USD",
-                  name: "Cabin with Ensuite",
+                  name: "Luxury Double Cabin with Private Ensuite Bathroom",
                   availability: "https://schema.org/LimitedAvailability",
                 },
                 {
                   "@type": "Offer",
-                  price: "3500",
+                  price: "5000",
                   priceCurrency: "USD",
                   name: "Per Person (Shared Cabin)",
                   availability: "https://schema.org/LimitedAvailability",

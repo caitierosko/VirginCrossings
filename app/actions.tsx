@@ -2,7 +2,10 @@
 
 import { Resend } from "resend"
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+// Instantiate lazily so the constructor never runs at build time without a key.
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY)
+}
 
 export async function submitReservation(formData: FormData) {
   try {
@@ -58,20 +61,21 @@ export async function submitReservation(formData: FormData) {
 
 async function sendConfirmationEmail(data: any) {
   try {
+    const resend = getResend()
     await resend.emails.send({
-      from: "Virgin CROSSings <onboarding@resend.dev>", // Swap for your verified domain once set up in Resend
+      from: "Virgin Crossings <onboarding@resend.dev>", // Swap for your verified domain once set up in Resend
       to: data.email as string,
-      subject: "Your Virgin CROSSings Reservation Request",
+      subject: "Your Virgin Crossings Reservation Request",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h1 style="color: #0891B2;">You're in! 🌬️</h1>
           <p>Hi ${data.name},</p>
-          <p>We've received your reservation request for the <strong>Virgin CROSSings Wing-Foil Flotilla</strong> (Feb 14-20, 2025).</p>
+          <p>We've received your reservation request for the <strong>Virgin Crossings Wing-Foil &amp; Kitesurf Expedition</strong> (Feb 13-20, 2027).</p>
           
           <div style="background: #F0F9FF; padding: 20px; border-radius: 12px; margin: 20px 0;">
             <h3 style="margin-top: 0;">Your Details:</h3>
             <ul style="line-height: 1.8;">
-              <li><strong>Cabin:</strong> ${data.cabin}</li>
+              <li><strong>Cabins:</strong> ${data.cabin}</li>
               <li><strong>Guests:</strong> ${data.guests}</li>
               <li><strong>Skill Level:</strong> ${data.skill}</li>
               <li><strong>Arrival:</strong> ${data.arrival}</li>
@@ -87,13 +91,13 @@ async function sendConfirmationEmail(data: any) {
             <li>Join the WhatsApp group for trip updates</li>
           </ol>
 
-          <p>Questions? Reply to this email or WhatsApp us at +1-XXX-XXX-XXXX</p>
+          <p>Questions? Reply to this email or WhatsApp us at +1-340-473-2759</p>
           
           <p style="color: #0891B2; font-weight: bold;">See you in the BVI! 🏝️</p>
           
           <hr style="border: none; border-top: 1px solid #E5E7EB; margin: 30px 0;" />
           <p style="color: #6B7280; font-size: 12px;">
-            Virgin CROSSings | February 14-20, 2025<br />
+            Virgin Crossings | February 13-20, 2027<br />
             British Virgin Islands
           </p>
         </div>
@@ -107,8 +111,9 @@ async function sendConfirmationEmail(data: any) {
 
 async function sendAdminNotification(data: any) {
   try {
+    const resend = getResend()
     await resend.emails.send({
-      from: "Virgin CROSSings <onboarding@resend.dev>", // Swap for your verified domain once set up in Resend
+      from: "Virgin Crossings <onboarding@resend.dev>", // Swap for your verified domain once set up in Resend
       to: "grantfleming@bellsouth.net", // Admin notification recipient
       replyTo: data.email as string,
       subject: `New Reservation: ${data.name}`,
