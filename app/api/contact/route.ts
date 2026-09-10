@@ -5,7 +5,7 @@ export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
   try {
-    const apiKey = process.env.RESEND_API_KEY;
+    const apiKey = process.env.API_KEY;
     if (!apiKey) {
       return new Response(
         JSON.stringify({ error: "Email service is not configured" }),
