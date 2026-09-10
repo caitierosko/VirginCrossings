@@ -1,9 +1,21 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Never evaluate this route at build time; it depends on runtime secrets.
+export const dynamic = "force-dynamic";
 
 export async function POST(req: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      return new Response(
+        JSON.stringify({ error: "Email service is not configured" }),
+        { status: 500 }
+      );
+    }
+
+    // Instantiate lazily so the constructor only runs on an actual request.
+    const resend = new Resend(apiKey);
+
     const body = await req.json();
     const { name, email, message } = body;
 
