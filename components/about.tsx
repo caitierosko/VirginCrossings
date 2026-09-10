@@ -24,13 +24,13 @@ export function About() {
         </div>
         <div className="grid sm:grid-cols-2 gap-6 mb-12">
           <img
-            src="/images/wingfoil-catamaran.png"
-            alt="Wing foiler gliding beside a crewed catamaran in the British Virgin Islands"
+            src="/images/about-wingfoil.jpg"
+            alt="Wing foiler in a yellow top lifting out of turquoise water past a BVI island"
             className="w-full h-64 object-cover rounded-2xl shadow-md"
           />
           <img
-            src="/images/kite-jump.png"
-            alt="Kitesurfer boosting a jump over turquoise Caribbean water"
+            src="/images/about-kite.jpg"
+            alt="Kitesurfer carving across the water with a teal kite aloft in the British Virgin Islands"
             className="w-full h-64 object-cover rounded-2xl shadow-md"
           />
         </div>
