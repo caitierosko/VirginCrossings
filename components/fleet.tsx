@@ -27,15 +27,13 @@ export function Fleet() {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <span className="inline-block bg-[#0891B2]/10 text-[#0891B2] px-4 py-1.5 rounded-full text-sm font-semibold mb-4 uppercase tracking-wide">
-            The Fleet
+            The Yachts
           </span>
           <h2 className="text-3xl md:text-5xl font-bold text-[#0A2540] mb-6 text-balance">
             Private Luxury Catamarans
           </h2>
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto text-pretty">
-            As cabins fill, we book out entire private luxury catamarans—each with 4–5 cabins on board. Ranging from 50
-            to 60 feet, the fleet includes yachts like the Bali 5.4 and Lagoon 50, every one crewed by a professional
-            captain and chef who handle all the logistics so you just ride.
+            We book out entire private luxury catamarans, each with 4–5 cabins on board. Ranging from 50 to 60 feet, the fleet includes yachts like the Bali 5.4 and Lagoon 52s, every one crewed by a professional captain and chef who handle all the logistics so you just ride.
           </p>
         </div>
 
