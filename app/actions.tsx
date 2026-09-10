@@ -4,7 +4,7 @@ import { Resend } from "resend"
 
 // Instantiate lazily so the constructor never runs at build time without a key.
 function getResend() {
-  return new Resend(process.env.RESEND_API_KEY)
+  return new Resend(process.env.API_KEY)
 }
 
 export async function submitReservation(formData: FormData) {
