@@ -23,8 +23,8 @@ export function Recap() {
         </div>
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <img
-            src="/images/recap-sunset.png"
-            alt="Travelers celebrating at sunset on a catamaran deck during the first Virgin CROSSings edition"
+            src="/images/recap-kite-jump.jpg"
+            alt="Kitesurfer boosting a big air jump over turquoise Caribbean water during the first Virgin Crossings edition"
             className="w-full h-80 object-cover rounded-3xl shadow-xl"
           />
           <div className="grid grid-cols-2 gap-6">
