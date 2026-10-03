@@ -24,8 +24,8 @@ export function About() {
         </div>
         <div className="grid sm:grid-cols-2 gap-6 mb-12">
           <img
-            src="/images/about-wingfoil.jpg"
-            alt="Wing foiler in a yellow top lifting out of turquoise water past a BVI island"
+src="/images/about-wingfoil-air.jpg"
+              alt="Wing foiler flipping upside down with a neon yellow wing above a breaking wave and palm-lined island"
             className="w-full h-64 object-cover rounded-2xl shadow-md"
           />
           <img
